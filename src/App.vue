@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderBar></HeaderBar>
+    <ContentTab></ContentTab>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import HeaderBar from './components/HeaderBar'
+  import ContentTab from './components/ContentTab'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  components:{
+    HeaderBar,
+    ContentTab
+  },
+  data: function(){
+    return {
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app{
+    overflow-y: hidden;
+  }
 </style>
